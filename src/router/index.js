@@ -27,6 +27,11 @@ const router = createRouter({
       name: "computed",
       component: () => import("../views/Computed.vue"),
     },
+    {
+      path: "/composables",
+      name: "composables",
+      component: () => import("../views/Composables.vue"),
+    },
   ],
 });
 
