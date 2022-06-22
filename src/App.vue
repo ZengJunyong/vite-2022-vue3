@@ -24,6 +24,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
         <RouterLink to="/composables">Composables</RouterLink>
         <RouterLink to="/watchers">Watchers</RouterLink>
         <RouterLink to="/forms">Forms</RouterLink>
+        <RouterLink to="/vuelidate">Vuelidate</RouterLink>
       </nav>
     </div>
   </header>

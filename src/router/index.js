@@ -42,6 +42,11 @@ const router = createRouter({
       name: "forms",
       component: () => import("../views/Forms.vue"),
     },
+    {
+      path: "/vuelidate",
+      name: "vuelidate",
+      component: () => import("../views/Vuelidate.vue"),
+    },
   ],
 });
 
