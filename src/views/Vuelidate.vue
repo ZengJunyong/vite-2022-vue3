@@ -1,6 +1,6 @@
 <script>
 import useVuelidate from '@vuelidate/core'
-import {required, email} from '@vuelidate/validators'
+import {required, email, helpers} from '@vuelidate/validators'
 
 export default {
   setup() {
@@ -12,7 +12,11 @@ export default {
       lastName: '',
       contact: {
         email: ''
-      }
+      },
+      todos: [
+        {context: ''},
+        {context: ''},
+      ],
     }
   },
   validations() {
@@ -21,6 +25,13 @@ export default {
       lastName: {required}, // Matches this.lastName
       contact: {
         email: {required, email} // Matches this.contact.email
+      },
+      todos: {
+        $each: helpers.forEach({
+          context: {
+            required
+          }
+        })
       }
     }
   }
@@ -31,4 +42,6 @@ export default {
   <input v-model="firstName" placeholder="firstName">
   <input v-model="lastName" placeholder="lastName">
   <input v-model="contact.email" placeholder="contact.email">
+  <hr>
+  <input v-for="todo in todos" v-model="todo.context" placeholder="todo">
 </template>
