@@ -264,6 +264,13 @@
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0.tgz#06455934091d237d71d81bac6617485de38b1c58"
   integrity sha512-zL5kygNq7hONrO1CzaUGprEAklAX+pH8J1MPMCU3Rd2xtSYkZ+PmKU3oEDRg8VAGdL5lNJHzDgrud5amFPtirw==
 
+"@vuelidate/components@^1.1.21":
+  version "1.1.21"
+  resolved "https://registry.yarnpkg.com/@vuelidate/components/-/components-1.1.21.tgz#1110fd399e17572e99d9b0a4703a7550b4a1295c"
+  integrity sha512-Ao7cPQulDMKZirhyKGJxnIcZFUAXBeQ1DeWACMZp6ClIvWPF5KnMQc0USs54KECAvETwKGjWsslcpEuoHU2hxg==
+  dependencies:
+    "@vuelidate/core" "^2.0.0-alpha.41"
+
 "@vuelidate/core@^2.0.0-alpha.41":
   version "2.0.0-alpha.41"
   resolved "https://registry.yarnpkg.com/@vuelidate/core/-/core-2.0.0-alpha.41.tgz#eb4644aa45755c20901b4b8d20e1fecfd5389142"

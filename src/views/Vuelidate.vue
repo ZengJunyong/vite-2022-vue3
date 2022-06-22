@@ -1,11 +1,12 @@
 <script>
 import CompA from '@/components/CompA.vue'
 import CompB from '@/components/CompB.vue'
+import CompC from '@/components/CompC.vue'
 import useVuelidate from '@vuelidate/core'
 import {required, email, helpers} from '@vuelidate/validators'
 
 export default {
-  components: {CompA, CompB},
+  components: {CompA, CompB, CompC},
   setup() {
     return {v$: useVuelidate()}
   },
@@ -53,4 +54,6 @@ export default {
   <CompA/>
   <hr>
   <CompB/>
+  <hr>
+  <CompC/>
 </template>
