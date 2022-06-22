@@ -32,6 +32,11 @@ const router = createRouter({
       name: "composables",
       component: () => import("../views/Composables.vue"),
     },
+    {
+      path: "/watchers",
+      name: "watchers",
+      component: () => import("../views/Watchers.vue"),
+    },
   ],
 });
 

@@ -22,6 +22,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
         <RouterLink to="/reactivity">Reactivity</RouterLink>
         <RouterLink to="/computed">Computed</RouterLink>
         <RouterLink to="/composables">Composables</RouterLink>
+        <RouterLink to="/watchers">Watchers</RouterLink>
       </nav>
     </div>
   </header>
