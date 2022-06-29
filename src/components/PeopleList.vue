@@ -4,11 +4,12 @@
       v-for="(person, index) of people"
       :person="person"
       :key="index"
-      @updatePerson="person = $event"
+      @updatePerson="updatePerson($event, person)"
     />
     <!-- This list will include all errors,
          both from this component and errors from every <PersonInput> -->
-    <div v-for="error of v$.$errors" :key="error.$uid">
+    <p>Parent component error:</p>
+    <div style="color: darkred" v-for="error of v$.$silentErrors" :key="error.$uid">
       {{ error.$message }}
     </div>
   </div>
@@ -17,7 +18,6 @@
 <script>
 import useVuelidate from '@vuelidate/core'
 import PersonInput from '@/components/PersonInput.vue'
-import {required, minLength} from '@vuelidate/validators'
 
 export default {
   components: { PersonInput },
@@ -29,11 +29,10 @@ export default {
       people: [ { name: 'John' }, { name: '' } ]
     }
   },
-  validations: {
-    people: {
-      required,
-      minLength: minLength(3),
-    }
-  }
+  methods: {
+    updatePerson($event,person) {
+      person.name = $event.name;
+    },
+  },
 }
 </script>

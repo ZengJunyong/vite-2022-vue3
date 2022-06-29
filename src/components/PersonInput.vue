@@ -1,6 +1,10 @@
 <template>
   <div>
-    <input type="text" :value="person.name" @input="$emit('updatePerson', { name: $event })" />
+    <input type="text" :value="person.name" @input="updatePerson" />
+    <p>Child component error:</p>
+    <div style="color: red;" v-for="error of v$.$silentErrors" :key="error.$uid">
+      {{ error.$message }}
+    </div>
   </div>
 </template>
 
@@ -17,9 +21,16 @@ export default {
   },
   validations: {
     person: {
-      required,
-      minLength: minLength(2),
+      name: {
+        required,
+        minLength: minLength(2),
+      }
     }
-  }
+  },
+  methods: {
+    updatePerson($event) {
+      this.$emit('updatePerson', { name: $event.target.value })
+    },
+  },
 }
 </script>
