@@ -2,11 +2,12 @@
 import CompA from '@/components/CompA.vue'
 import CompB from '@/components/CompB.vue'
 import CompC from '@/components/CompC.vue'
+import PeopleList from '@/components/PeopleList.vue'
 import useVuelidate from '@vuelidate/core'
 import {required, email, helpers} from '@vuelidate/validators'
 
 export default {
-  components: {CompA, CompB, CompC},
+  components: {CompA, CompB, CompC, PeopleList},
   setup() {
     return {v$: useVuelidate()}
   },
@@ -56,4 +57,6 @@ export default {
   <CompB/>
   <hr>
   <CompC/>
+  <hr>
+  <PeopleList/>
 </template>
